@@ -6,6 +6,7 @@ import {
   Visibility,
   VisibilityOff,
 } from "@mui/icons-material";
+import GoogleIcon from "@mui/icons-material/Google";
 import { auth, provider } from "../../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "./../../context/AuthContext";
@@ -120,7 +121,7 @@ const Login = () => {
             style={{ textDecoration: "none" }}
             onClick={signInWithGoogle}
           >
-            <img src="/assets/google.png" alt="" className="googleImg" />
+            <GoogleIcon className="facebookIcon" />
             <span>Login with Google</span>
           </Link>
         </div>

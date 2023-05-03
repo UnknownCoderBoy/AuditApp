@@ -1,6 +1,9 @@
 import React, { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
 import "./widget.scss";
+import world from "../../assets/world.jpg";
+import schoolpupils from "../../assets/schoolpupils.jpg";
+import user from "../../assets/learn.jpg";
 
 const Widget = ({ type }) => {
   const { currentUser } = useContext(AuthContext);
@@ -12,11 +15,7 @@ const Widget = ({ type }) => {
       : "Editor's choice";
 
   const img =
-    type === "user"
-      ? "/assets/learn.jpg"
-      : type === "popular"
-      ? "/assets/world.jpg"
-      : "/assets/schoolpupils.jpg";
+    type === "user" ? user : type === "popular" ? world : schoolpupils;
 
   return (
     <div className="widget">
