@@ -120,7 +120,7 @@ const Login = () => {
             style={{ textDecoration: "none" }}
             onClick={signInWithGoogle}
           >
-            <img src="/assets/google.png" alt="" className="googleImg" />
+            <img src="./google.png" alt="" className="googleImg" />
             <span>Login with Google</span>
           </Link>
         </div>
