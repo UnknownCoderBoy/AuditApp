@@ -11,6 +11,7 @@ import { storage } from "../../firebase";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 import "./update.scss";
+import DefaultProfile from "../../assets/DefaultProfile.jpg";
 
 const Update = () => {
   const [data, setData] = useState({
@@ -88,11 +89,7 @@ const Update = () => {
               <span>Profile Photo</span>
               <div className="profilePic">
                 <img
-                  src={
-                    img
-                      ? URL.createObjectURL(img)
-                      : "/assets/DefaultProfile.jpg"
-                  }
+                  src={img ? URL.createObjectURL(img) : DefaultProfile}
                   alt=""
                   className="profileImg"
                 />
