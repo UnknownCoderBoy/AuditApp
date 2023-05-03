@@ -3,6 +3,7 @@ import FormInput from "../../components/formInput/FormInput";
 import { Link, useNavigate } from "react-router-dom";
 import "./register.scss";
 import { FacebookRounded } from "@mui/icons-material";
+import GoogleIcon from "@mui/icons-material/Google";
 import { auth, provider } from "../../firebase";
 import {
   updateProfile,
@@ -141,7 +142,7 @@ const Register = () => {
             style={{ textDecoration: "none" }}
             onClick={signInWithGoogle}
           >
-            <img src="/assets/google.png" alt="" className="googleImg" />
+            <GoogleIcon className="facebookIcon" />
             <span>Login with Google</span>
           </Link>
         </div>

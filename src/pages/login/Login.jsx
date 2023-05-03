@@ -3,10 +3,10 @@ import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FacebookRounded,
-  GoogleIcon,
   Visibility,
   VisibilityOff,
 } from "@mui/icons-material";
+import GoogleIcon from "@mui/icons-material/Google";
 import { auth, provider } from "../../firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { AuthContext } from "./../../context/AuthContext";
@@ -121,7 +121,7 @@ const Login = () => {
             style={{ textDecoration: "none" }}
             onClick={signInWithGoogle}
           >
-            <GoogleIcon className="googleIcon" />
+            <GoogleIcon className="facebookIcon" />
             <span>Login with Google</span>
           </Link>
         </div>
