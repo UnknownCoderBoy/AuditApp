@@ -3,6 +3,7 @@ import "./login.scss";
 import { Link, useNavigate } from "react-router-dom";
 import {
   FacebookRounded,
+  GoogleIcon,
   Visibility,
   VisibilityOff,
 } from "@mui/icons-material";
@@ -120,7 +121,7 @@ const Login = () => {
             style={{ textDecoration: "none" }}
             onClick={signInWithGoogle}
           >
-            <img src="./google.png" alt="" className="googleImg" />
+            <GoogleIcon className="googleIcon" />
             <span>Login with Google</span>
           </Link>
         </div>
