@@ -1,6 +1,7 @@
 import "./navbar.scss";
 import { useContext } from "react";
 import { AuthContext } from "./../../context/AuthContext";
+import DefaultProfile from "../../assets/DefaultProfile.jpg";
 
 const Navbar = () => {
   const { currentUser } = useContext(AuthContext);
@@ -9,7 +10,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbarWrapper">
         <div className="navbarLeft">
-          <span className="logo">DesignMediaX</span>
+          <span className="logo">AuditApp</span>
         </div>
         <div className="navbarCenter">
           <div className="search">
@@ -23,11 +24,7 @@ const Navbar = () => {
         <div className="navbarRight">
           <img
             className="profileImg"
-            src={
-              currentUser.photoURL
-                ? currentUser.photoURL
-                : "/assets/DefaultProfile.jpg"
-            }
+            src={currentUser.photoURL ? currentUser.photoURL : DefaultProfile}
             alt=""
           />
           <span className="navbarName">{currentUser.displayName}</span>
