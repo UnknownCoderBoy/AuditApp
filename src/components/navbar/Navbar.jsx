@@ -10,7 +10,7 @@ const Navbar = () => {
     <div className="navbar">
       <div className="navbarWrapper">
         <div className="navbarLeft">
-          <span className="logo">DesignMediaX</span>
+          <span className="logo">AuditApp</span>
         </div>
         <div className="navbarCenter">
           <div className="search">
