@@ -13,7 +13,7 @@ const Home = () => {
         <div className="homeContainer">
           <Sidebar />
           <Update />
-          <Rightbar />
+          {/* <Rightbar /> */}
         </div>
       </>
     </div>

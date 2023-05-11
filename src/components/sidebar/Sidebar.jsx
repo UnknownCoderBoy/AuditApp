@@ -1,15 +1,10 @@
 import {
-  ExitToAppOutlined,
-  FileCopyOutlined,
-  GroupOutlined,
-  HearingOutlined,
-  HomeOutlined,
-  List,
-  MovieCreationOutlined,
-  PhotoSizeSelectActualOutlined,
-  ScheduleOutlined,
+  Assignment,
   Settings,
-  ShoppingBasketOutlined,
+  SettingsSuggest,
+  AssignmentInd,
+  Straighten,
+  Psychology,
 } from "@mui/icons-material";
 import { useContext } from "react";
 import { AuthContext } from "../../context/AuthContext";
@@ -29,15 +24,11 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebarbarWrapper">
-        <MenuLink icon={<HomeOutlined />} text="Homepage" />
-        <MenuLink icon={<List />} text="Lists" />
-        <MenuLink icon={<ShoppingBasketOutlined />} text="Products" />
-        <MenuLink icon={<GroupOutlined />} text="Groups" />
-        <MenuLink icon={<FileCopyOutlined />} text="Pages" />
-        <MenuLink icon={<PhotoSizeSelectActualOutlined />} text="Photos" />
-        <MenuLink icon={<MovieCreationOutlined />} text="Videos" />
-        <MenuLink icon={<ScheduleOutlined />} text="Schedule" />
-        <MenuLink icon={<HearingOutlined />} text="Wishlist" />
+        <MenuLink icon={<AssignmentInd />} text="Craftmanship" />
+        <MenuLink icon={<Assignment />} text="PQ Merit Rating" />
+        <MenuLink icon={<SettingsSuggest />} text="E-Cube" />
+        <MenuLink icon={<Straighten />} text="Gap and Flushness Measurment" />
+        <MenuLink icon={<Psychology />} text="Functionality" />
         <MenuLink icon={<Settings />} text="Settings" />
       </div>
     </div>

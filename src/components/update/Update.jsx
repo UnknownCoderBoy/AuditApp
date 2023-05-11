@@ -87,19 +87,24 @@ const Update = () => {
         <div className="updateContainer">
           <Grid
             container
-            rowSpacing={1}
-            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            rowSpacing={2}
+            columnSpacing={{ xs: 1, sm: 2, md: 2, lg: 3 }}
+            item
+            lg={4}
+            md={4}
+            sm={6}
+            xs={4}
           >
-            <Grid item xs={4} sm={6} md={12}>
+            <Grid item lg={3} md={4} sm={6} xs={12}>
               <Cards />
             </Grid>
-            <Grid item xs={4} sm={6} md={12}>
+            <Grid item item lg={3} md={4} sm={6} xs={12}>
               <Cards />
             </Grid>
-            <Grid item xs={4} sm={6} md={12}>
+            <Grid item item lg={3} md={4} sm={6} xs={12}>
               <Cards />
             </Grid>
-            <Grid item xs={4} sm={6} md={12}>
+            <Grid item item lg={3} md={4} sm={6} xs={12}>
               <Cards />
             </Grid>
           </Grid>
