@@ -24,12 +24,24 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="sidebarbarWrapper">
-        <MenuLink icon={<AssignmentInd />} text="Craftmanship" />
-        <MenuLink icon={<Assignment />} text="PQ Merit Rating" />
-        <MenuLink icon={<SettingsSuggest />} text="E-Cube" />
-        <MenuLink icon={<Straighten />} text="Gap and Flushness Measurment" />
-        <MenuLink icon={<Psychology />} text="Functionality" />
-        <MenuLink icon={<Settings />} text="Settings" />
+        <MenuLink icon={<AssignmentInd />} text="Craftmanship" link="/" />
+        <MenuLink
+          icon={<Assignment />}
+          text="PQ Merit Rating"
+          link="/meritrating"
+        />
+        <MenuLink icon={<SettingsSuggest />} text="E-Cube" link="/ecube" />
+        <MenuLink
+          icon={<Straighten />}
+          text="Gap and Flushness Measurment"
+          link="/measurment"
+        />
+        <MenuLink
+          icon={<Psychology />}
+          text="Functionality"
+          link="/functionality"
+        />
+        <MenuLink icon={<Settings />} text="Settings" link="/settings" />
       </div>
     </div>
   );
