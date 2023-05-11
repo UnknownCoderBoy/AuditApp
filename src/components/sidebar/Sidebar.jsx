@@ -39,9 +39,6 @@ const Sidebar = () => {
         <MenuLink icon={<ScheduleOutlined />} text="Schedule" />
         <MenuLink icon={<HearingOutlined />} text="Wishlist" />
         <MenuLink icon={<Settings />} text="Settings" />
-        <span onClick={handleLogout}>
-          <MenuLink icon={<ExitToAppOutlined />} text="Logout" />
-        </span>
       </div>
     </div>
   );
