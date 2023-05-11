@@ -8,6 +8,7 @@ import { AuthContext } from "./context/AuthContext";
 import Home from "./pages/home/Home";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
+import MeritRating from "./pages/meritrating/MeritRating";
 
 function App() {
   const { currentUser } = useContext(AuthContext);
@@ -16,20 +17,72 @@ function App() {
     return currentUser ? children : <Navigate to="/login" />;
   };
 
+  const UnAuthRoute = ({ children }) => {
+    return currentUser ? <Navigate to="/" /> : children;
+  };
+
   const router = createBrowserRouter([
     {
       path: "/login",
-      element: <Login />,
+      element: (
+        <UnAuthRoute>
+          <Login />
+        </UnAuthRoute>
+      ),
     },
     {
       path: "/register",
-      element: <Register />,
+      element: (
+        <UnAuthRoute>
+          <Register />
+        </UnAuthRoute>
+      ),
     },
     {
       path: "/",
       element: (
         <AuthRoute>
           <Home />
+        </AuthRoute>
+      ),
+    },
+    {
+      path: "/meritrating",
+      element: (
+        <AuthRoute>
+          <MeritRating />
+        </AuthRoute>
+      ),
+    },
+    {
+      path: "/ecube",
+      element: (
+        <AuthRoute>
+          <MeritRating />
+        </AuthRoute>
+      ),
+    },
+    {
+      path: "/measurment",
+      element: (
+        <AuthRoute>
+          <MeritRating />
+        </AuthRoute>
+      ),
+    },
+    {
+      path: "/functionality",
+      element: (
+        <AuthRoute>
+          <MeritRating />
+        </AuthRoute>
+      ),
+    },
+    {
+      path: "/settings",
+      element: (
+        <AuthRoute>
+          <MeritRating />
         </AuthRoute>
       ),
     },
