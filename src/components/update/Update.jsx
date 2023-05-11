@@ -12,6 +12,8 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useNavigate } from "react-router-dom";
 import "./update.scss";
 import DefaultProfile from "../../assets/DefaultProfile.jpg";
+import Cards from "../../components/cards/Cards";
+import Grid from "@mui/material/Grid";
 
 const Update = () => {
   const [data, setData] = useState({
@@ -81,62 +83,26 @@ const Update = () => {
     <div className="update">
       <div className="updateWrapper">
         <h3 className="updateTitle">Edit Your Account</h3>
-        <span>Email Address: {currentUser.email}</span>
 
         <div className="updateContainer">
-          <form onSubmit={handleUpdate}>
-            <div className="formItem">
-              <span>Profile Photo</span>
-              <div className="profilePic">
-                <img
-                  src={img ? URL.createObjectURL(img) : DefaultProfile}
-                  alt=""
-                  className="profileImg"
-                />
-                <label htmlFor="file">
-                  <span className="change">Change</span>
-                </label>
-                <input
-                  type="file"
-                  id="file"
-                  style={{ display: "none" }}
-                  onChange={(e) => setImg(e.target.files[0])}
-                />
-              </div>
-            </div>
-            <div className="formItem">
-              <label>Username</label>
-              <input
-                className="formInput"
-                type="text"
-                name="username"
-                placeholder={currentUser.displayName}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="formItem">
-              <label>Email</label>
-              <input
-                className="formInput"
-                type="email"
-                name="newEmail"
-                placeholder={currentUser.email}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="formItem">
-              <label>Password</label>
-              <input
-                className="formInput"
-                name="oldPassword"
-                type="password"
-                onChange={handleChange}
-              />
-            </div>
-            <button type="submit" className="updateButton">
-              Update Profile
-            </button>
-          </form>
+          <Grid
+            container
+            rowSpacing={1}
+            columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+          >
+            <Grid item xs={4} sm={6} md={12}>
+              <Cards />
+            </Grid>
+            <Grid item xs={4} sm={6} md={12}>
+              <Cards />
+            </Grid>
+            <Grid item xs={4} sm={6} md={12}>
+              <Cards />
+            </Grid>
+            <Grid item xs={4} sm={6} md={12}>
+              <Cards />
+            </Grid>
+          </Grid>
         </div>
       </div>
     </div>
